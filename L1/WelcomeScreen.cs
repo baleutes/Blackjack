@@ -9,12 +9,14 @@ namespace L1
 
         private void newGameButton_Click(object sender, EventArgs e)
         {
-
+            var gameScreen = new GameScreen();
+            gameScreen.Show();
+            this.Hide();
         }
 
         private void quitGameButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
