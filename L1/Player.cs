@@ -24,39 +24,39 @@ namespace L1
         {
             var score = 0;
 
-            if (card[2] == 2)
+            if (card[2] == '2')
             {
                 score = 2;
             }
-            else if (card[2] == 3)
+            else if (card[2] == '3')
             {
                 score = 3;
             }
-            else if (card[2] == 4)
+            else if (card[2] == '4')
             {
                 score = 4;
             }
-            else if (card[2] == 5)
+            else if (card[2] == '5')
             {
                 score = 5;
             }
-            else if (card[2] == 6)
+            else if (card[2] == '6')
             {
                 score = 6;
             }
-            else if (card[2] == 7)
+            else if (card[2] == '7')
             {
                 score = 7;
             }
-            else if (card[2] == 8)
+            else if (card[2] == '8')
             {
                 score = 8;
             }
-            else if (card[2] == 9)
+            else if (card[2] == '9')
             {
                 score = 9;
             }
-            else if (card[2] == 1)
+            else if (card[2] == '1')
             {
                 score = 10;
             }

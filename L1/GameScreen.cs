@@ -31,32 +31,68 @@ namespace L1
             me.AddCard(deck.DrawCard());
 
             dealer.AddCard(deck.DrawCard());
-            dealer.AddCard(deck.DrawCard());
+
+            showPlayerScoreLabel.Text = me.Score.ToString();
+            showPlayerCardsLabel.Text = me.GetCards();
+            showDealerScoreLabel.Text = dealer.Score.ToString();
+            showDealerCardsLabel.Text = dealer.GetCards();
         }
 
         void hitButton_Click(object sender, EventArgs e)
         {
             me.AddCard(deck.DrawCard());
+            me.GetCards();
+            showPlayerScoreLabel.Text = me.Score.ToString();
+            showPlayerCardsLabel.Text = me.GetCards();
+
+            if (me.Score == 21)
+            {
+                hitButton.Enabled = false;
+                stayButton_Click(this, new EventArgs());
+            }
+            else if (me.Score > 21)
+            {
+                var form = new EndScreen("YOU LOSE!");
+                form.ShowDialog();
+                ResetState();
+            }
         }
 
         void stayButton_Click(object sender, EventArgs e)
         {
-            var dealerDrawsCard = true;
-            while (dealerDrawsCard)
+            while (true)
             {
                 dealer.AddCard(deck.DrawCard());
+                dealer.GetCards();
+                showDealerScoreLabel.Text = dealer.Score.ToString();
+                showDealerCardsLabel.Text = dealer.GetCards();
 
-                if (dealer.Score > me.Score)
+                if (dealer.Score > 21)
                 {
-                    //TODO: Dealer wins
+                    showDealerScoreLabel.Text = dealer.Score.ToString();
+                    showDealerCardsLabel.Text = dealer.GetCards();
+                    var form = new EndScreen("YOU WIN!");
+                    form.ShowDialog();
+                    ResetState();
+                    return;
                 }
-                else if (dealer.Score > 21)
+                else if (dealer.Score > me.Score)
                 {
-                    //TODO: dealer lose me win
+                    showDealerScoreLabel.Text = dealer.Score.ToString();
+                    showDealerCardsLabel.Text = dealer.GetCards();
+                    var form = new EndScreen("YOU LOSE!");
+                    form.ShowDialog();
+                    ResetState();
+                    return;
                 }
                 else if (dealer.Score == me.Score && dealer.Score == 21)
                 {
-                    //TODO: nobody wins; tie
+                    showDealerScoreLabel.Text = dealer.Score.ToString();
+                    showDealerCardsLabel.Text = dealer.GetCards();
+                    var form = new EndScreen("TIE!");
+                    form.ShowDialog();
+                    ResetState();
+                    return;
                 }
             }
         }
@@ -74,6 +110,11 @@ namespace L1
             deck = new Deck();
             me = new();
             dealer = new();
+
+            showPlayerScoreLabel.Text = "0";
+            showPlayerCardsLabel.Text = "-";
+            showDealerScoreLabel.Text = "0";
+            showDealerCardsLabel.Text = "-";
         }
 
         void SwitchButtonStates()

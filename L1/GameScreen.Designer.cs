@@ -105,36 +105,36 @@
             this.showPlayerScoreLabel.AutoSize = true;
             this.showPlayerScoreLabel.Location = new System.Drawing.Point(119, 76);
             this.showPlayerScoreLabel.Name = "showPlayerScoreLabel";
-            this.showPlayerScoreLabel.Size = new System.Drawing.Size(99, 20);
+            this.showPlayerScoreLabel.Size = new System.Drawing.Size(17, 20);
             this.showPlayerScoreLabel.TabIndex = 6;
-            this.showPlayerScoreLabel.Text = "[player score]";
+            this.showPlayerScoreLabel.Text = "0";
             // 
             // showPlayerCardsLabel
             // 
             this.showPlayerCardsLabel.AutoSize = true;
             this.showPlayerCardsLabel.Location = new System.Drawing.Point(119, 115);
             this.showPlayerCardsLabel.Name = "showPlayerCardsLabel";
-            this.showPlayerCardsLabel.Size = new System.Drawing.Size(116, 20);
+            this.showPlayerCardsLabel.Size = new System.Drawing.Size(15, 20);
             this.showPlayerCardsLabel.TabIndex = 7;
-            this.showPlayerCardsLabel.Text = "[player card list]";
+            this.showPlayerCardsLabel.Text = "-";
             // 
             // showDealerScoreLabel
             // 
             this.showDealerScoreLabel.AutoSize = true;
             this.showDealerScoreLabel.Location = new System.Drawing.Point(119, 235);
             this.showDealerScoreLabel.Name = "showDealerScoreLabel";
-            this.showDealerScoreLabel.Size = new System.Drawing.Size(100, 20);
+            this.showDealerScoreLabel.Size = new System.Drawing.Size(17, 20);
             this.showDealerScoreLabel.TabIndex = 8;
-            this.showDealerScoreLabel.Text = "[dealer score]";
+            this.showDealerScoreLabel.Text = "0";
             // 
             // showDealerCardsLabel
             // 
             this.showDealerCardsLabel.AutoSize = true;
             this.showDealerCardsLabel.Location = new System.Drawing.Point(119, 275);
             this.showDealerCardsLabel.Name = "showDealerCardsLabel";
-            this.showDealerCardsLabel.Size = new System.Drawing.Size(117, 20);
+            this.showDealerCardsLabel.Size = new System.Drawing.Size(15, 20);
             this.showDealerCardsLabel.TabIndex = 9;
-            this.showDealerCardsLabel.Text = "[dealer card list]";
+            this.showDealerCardsLabel.Text = "-";
             // 
             // dealButton
             // 
