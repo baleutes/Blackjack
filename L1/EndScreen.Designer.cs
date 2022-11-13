@@ -60,7 +60,8 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.messageLabel);
             this.Name = "EndScreen";
-            this.Text = "EndScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Blackjack";
             this.ResumeLayout(false);
 
         }
