@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeScreen));
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.newGameButton = new System.Windows.Forms.Button();
             this.quitGameButton = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             this.Controls.Add(this.quitGameButton);
             this.Controls.Add(this.newGameButton);
             this.Controls.Add(this.welcomeLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "WelcomeScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

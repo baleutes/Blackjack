@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.playerNameLabel = new System.Windows.Forms.Label();
             this.dealerNameLabel = new System.Windows.Forms.Label();
             this.playerScoreLabel = new System.Windows.Forms.Label();
@@ -199,6 +200,7 @@
             this.Controls.Add(this.playerScoreLabel);
             this.Controls.Add(this.dealerNameLabel);
             this.Controls.Add(this.playerNameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "GameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
