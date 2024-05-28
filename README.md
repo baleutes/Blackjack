@@ -1,3 +1,3 @@
 # Blackjack
 
-Simple Blackjack game made with C# for one of university's laboratory works.
+Simple Blackjack game made with Windows Forms and C# for one of the tasks in university.
